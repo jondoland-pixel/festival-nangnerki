@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Festival Nangnerki – 8e édition, Sikasso, Mali</title>
+<meta name="description" content="Festival Culturel International Nangnerki, 8e édition, du 26 mars au 4 avril 2027, au Stade Babemba Traoré de Sikasso (Mali). Programme, foire-exposition, partenariats.">
+<meta property="og:title" content="Festival Nangnerki – 8e édition, Sikasso, Mali">
+<meta property="og:description" content="Du 26 mars au 4 avril 2027, esplanade du Stade Babemba Traoré, Sikasso.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/affiche8.webp">
+<link rel="icon" href="assets/affiche8.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --brun:#2B1408; --brun2:#5B2400; --terre:#8A3A00; --or:#F2B84B;
+  --creme:#FFF8EA; --sable:#F6E7C8; --filet:#D9C49A; --vert:#1F7A3A;
+}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;font-family:'Inter',system-ui,sans-serif;color:var(--brun);background:var(--creme)}
+
+/* Accessibilité : focus visible et lien d'évitement */
+:focus-visible{outline:3px solid var(--brun);outline-offset:3px;box-shadow:0 0 0 3px var(--or)}
+.sombre :focus-visible{outline-color:var(--or);box-shadow:none}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--creme);color:var(--brun);padding:12px 20px;font-weight:700;z-index:50}
+.skip:focus{left:8px}
+
+/* En-tête fixe */
+.entete{position:sticky;top:0;z-index:20;background:var(--brun);color:var(--creme)}
+.entete-in{max-width:1200px;margin:0 auto;padding:10px 24px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center}
+.marque{font-family:'Bebas Neue',Impact,sans-serif;font-size:30px;letter-spacing:2px;color:var(--creme);text-decoration:none;margin-right:auto}
+.marque span{color:var(--or)}
+.nav{display:flex;gap:4px 8px;flex-wrap:wrap}
+.nav a{color:var(--creme);text-decoration:none;font-weight:600;font-size:15px;padding:12px 10px;min-height:44px;box-sizing:border-box;border-bottom:3px solid transparent}
+.nav a:hover{color:var(--or);border-bottom-color:var(--or)}
+@media (max-width:860px){
+  .nav{order:3;width:100%;flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent);padding-right:32px;box-sizing:border-box}
+}
+
+/* Boutons : un seul composant, deux variantes */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;box-sizing:border-box;padding:12px 28px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid var(--brun);cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.btn-primaire{background:var(--brun);color:var(--creme)}
+.btn-primaire:hover{background:var(--brun2);border-color:var(--brun2);color:var(--creme)}
+.btn-secondaire{background:var(--creme);color:var(--brun)}
+.btn-secondaire:hover{background:var(--sable);color:var(--brun)}
+.btn-or{background:var(--or);color:var(--brun);border-color:var(--or)}
+.btn-or:hover{background:var(--creme);border-color:var(--creme);color:var(--brun)}
+.entete .btn{min-height:44px;padding:8px 20px}
+
+/* Liens de texte */
+.champ{width:100%;box-sizing:border-box;min-height:48px;padding:10px 14px;font:inherit;font-size:16px;color:var(--brun);background:var(--creme);border:2px solid var(--brun)}
+.champ::placeholder{color:#7A5A3A}
+.tlink{color:var(--terre)}
+.tlink:hover{color:var(--brun2)}
+
+/* Textes et titres */
+.surtitre{font-weight:700;letter-spacing:2px;font-size:13px;color:var(--terre)}
+.sombre .surtitre{color:var(--or)}
+.h1{margin:0;font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(64px,13vw,112px);line-height:0.9;letter-spacing:3px}
+.h2{margin:0;font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(38px,6vw,56px);line-height:1;letter-spacing:1px}
+.h3b{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(28px,4vw,36px);letter-spacing:1px}
+.texte{margin:0;font-size:18px;line-height:1.7}
+
+/* Cartes */
+.photo{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;background:var(--sable)}
+html.anim .rev{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+html.anim .rev.vu{opacity:1;transform:none}
+.cd{display:flex;gap:10px;flex-wrap:wrap}
+.cd-b{background:var(--brun);color:var(--creme);min-width:76px;padding:10px 14px;text-align:center}
+.cd-n{font-family:'Bebas Neue',Impact,sans-serif;font-size:40px;line-height:1;color:var(--or)}
+.cd-l{font-size:12px;font-weight:600;letter-spacing:1px}
+@media (prefers-reduced-motion:reduce){html.anim .rev{opacity:1;transform:none;transition:none}}
+/* Écran d'ouverture : affiche de la 8e édition */
+.splash{display:none}
+html.splash-on .splash{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:16px;box-sizing:border-box;background:radial-gradient(ellipse at 50% 40%,#FBD27A 0%,#F2B84B 55%,#C98A1E 100%);transition:transform .85s cubic-bezier(.7,0,.3,1)}
+html.splash-on .splash.sortie{transform:translateY(-100%)}
+.splash-affiche{height:min(80vh,820px);width:auto;max-width:92vw;object-fit:contain;display:block;box-shadow:0 24px 60px rgba(43,20,8,.35);animation:splashIn 1.2s cubic-bezier(.2,.7,.2,1) both}
+.splash-barre{position:absolute;left:0;bottom:0;height:5px;background:var(--brun);width:100%;transform-origin:left;animation:splashBarre 4.2s linear both}
+@keyframes splashIn{from{opacity:0;transform:scale(1.07) translateY(16px)}to{opacity:1;transform:none}}
+@keyframes splashBarre{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (prefers-reduced-motion:reduce){html.splash-on .splash{display:none}}
+.carte-axe{background:var(--creme);padding:28px;border-top:6px solid var(--vert);display:flex;flex-direction:column;gap:10px;transition:transform .2s,box-shadow .2s}
+.carte-axe:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(43,20,8,.12)}
+.carte-stand{background:var(--creme);padding:18px 20px;border-left:6px solid var(--vert);display:flex;flex-direction:column;gap:4px}
+
+/* Onglets du programme */
+.onglet{min-height:48px;padding:10px 18px;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;border:2px solid var(--brun);background:var(--creme);color:var(--brun);transition:background .15s,color .15s}
+.onglet:hover{background:var(--sable)}
+.onglet[aria-pressed="true"],.onglet[aria-selected="true"],.onglet[aria-checked="true"]{background:var(--brun);color:var(--creme)}
+.onglet[aria-pressed="true"]:hover,.onglet[aria-selected="true"]:hover,.onglet[aria-checked="true"]:hover{background:var(--brun2)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn,.onglet,.carte-axe{transition:none}
+  .carte-axe:hover{transform:none}
+}
+
+[hidden]{display:none!important}</style>
+</head>
+<body>
+
+<div id="haut" style="width:100%;box-sizing:border-box">
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<!-- Écran d'ouverture -->
+<div id="splash" class="splash sombre" role="dialog" aria-label="Affiche de la 8e édition du Festival Nangnerki">
+<img class="splash-affiche" src="assets/affiche8.webp" alt="Affiche de la 8e édition du Festival Nangnerki : du 26 mars au 4 avril 2027, au Stade Babemba Traoré de Sikasso. Infoline : +223 76 40 99 45." width="899" height="1260">
+<button id="splash-entrer" type="button" class="btn btn-primaire">Entrer sur le site</button>
+<div class="splash-barre" aria-hidden="true"></div>
+</div>
+
+<!-- En-tête -->
+<header class="entete sombre">
+<div class="entete-in">
+<a class="marque" href="#haut">Festival <span>Nangnerki</span></a>
+<nav class="nav" aria-label="Navigation principale">
+<a href="#apropos">Le festival</a>
+<a href="#activites">Activités</a>
+<a href="#programme">Programme</a>
+<a href="#balafon">Balafon</a>
+<a href="#exposants">Exposants</a>
+<a href="#partenaires">Partenaires</a>
+<a href="#edition7">Édition 7</a>
+<a href="#contact">Contact</a>
+</nav>
+<a class="btn btn-or" href="#exposants">Réserver un stand</a>
+</div>
+</header>
+
+<main id="contenu">
+
+<!-- Hero -->
+<section style="background:var(--or)">
+<div style="max-width:1200px;margin:0 auto;padding:56px 24px;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+<div style="flex:999 1 480px;min-width:0;display:flex;flex-direction:column;gap:20px">
+<div style="display:inline-block;align-self:flex-start;background:var(--brun);color:var(--creme);padding:8px 16px;font-weight:700;font-size:14px;letter-spacing:1px">8e ÉDITION · FESTIVAL CULTUREL INTERNATIONAL · SIKASSO, MALI</div>
+<h1 class="h1">Festival<br>Nangnerki</h1>
+<p style="margin:0;font-size:28px;font-weight:600">Du 26 mars au 4 avril 2027</p>
+<div role="timer" aria-label="Compte à rebours avant l'ouverture du festival" style="display:flex;flex-direction:column;gap:8px">
+<div class="cd">
+<div class="cd-b"><div class="cd-n"><span id="cd-j">0</span></div><div class="cd-l">JOURS</div></div>
+<div class="cd-b"><div class="cd-n"><span id="cd-h">0</span></div><div class="cd-l">HEURES</div></div>
+<div class="cd-b"><div class="cd-n"><span id="cd-m">0</span></div><div class="cd-l">MINUTES</div></div>
+</div>
+<div style="font-size:14px;font-weight:600"><span id="cd-t"></span></div>
+</div>
+<p style="margin:0;font-size:18px;font-weight:600">Esplanade du Stade Babemba Traoré, Sikasso</p>
+<p style="margin:0;font-size:20px;line-height:1.5;max-width:600px">« L'intégration culturelle comme levier de souveraineté, de paix et de développement durable des peuples »</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px">
+<a class="btn btn-primaire" href="#exposants">Réserver un stand</a>
+<a class="btn btn-secondaire" href="#partenaires">Devenir partenaire</a>
+<a href="#programme" style="align-self:center;color:var(--brun);font-weight:700;font-size:16px;text-decoration:underline;text-underline-offset:4px;padding:14px 4px;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center">Voir le programme →</a>
+</div>
+</div>
+<div style="flex:1 1 320px;min-width:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px">
+
+<div style="background:var(--creme);padding:24px;display:flex;flex-direction:column;gap:6px">
+<div style="font-family:'Bebas Neue',Impact,sans-serif;font-size:56px;line-height:1;color:var(--terre)">500 000</div>
+<div style="font-size:15px;font-weight:600;line-height:1.4">personnes touchées par édition</div>
+</div>
+
+<div style="background:var(--creme);padding:24px;display:flex;flex-direction:column;gap:6px">
+<div style="font-family:'Bebas Neue',Impact,sans-serif;font-size:56px;line-height:1;color:var(--terre)">30 000</div>
+<div style="font-size:15px;font-weight:600;line-height:1.4">visiteurs</div>
+</div>
+
+<div style="background:var(--creme);padding:24px;display:flex;flex-direction:column;gap:6px">
+<div style="font-family:'Bebas Neue',Impact,sans-serif;font-size:56px;line-height:1;color:var(--terre)">10</div>
+<div style="font-size:15px;font-weight:600;line-height:1.4">jours de festival, du 26 mars au 4 avril</div>
+</div>
+
+<div style="background:var(--creme);padding:24px;display:flex;flex-direction:column;gap:6px">
+<div style="font-family:'Bebas Neue',Impact,sans-serif;font-size:56px;line-height:1;color:var(--terre)">19</div>
+<div style="font-size:15px;font-weight:600;line-height:1.4">quartiers de Sikasso mobilisés</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Édition 7 en images -->
+<section style="background:var(--brun)">
+<div style="max-width:1200px;margin:0 auto;padding:12px 24px 0;display:flex;flex-wrap:wrap;gap:12px">
+<div style="flex:2 1 480px;min-width:0"><img class="photo" src="assets/concert1.webp" alt="Concert sur la grande scène du festival, édition 7, Sikasso" loading="lazy" width="1080" height="720" style=""></div>
+<div style="flex:1 1 240px;min-width:0;display:flex;flex-direction:column;gap:12px"><img class="photo" src="assets/foule.webp" alt="Public rassemblé devant la scène lors de l'édition 7" loading="lazy" width="1080" height="720" style=""><img class="photo" src="assets/danse.webp" alt="Troupe de danse sur scène lors d'une soirée de l'édition 7" loading="lazy" width="1080" height="720" style=""></div>
+</div>
+<p class="sombre" style="max-width:1200px;margin:0 auto;padding:14px 24px 16px;font-size:14px;color:var(--or);font-weight:600;letter-spacing:1px">ÉDITION 7 · FÉVRIER 2026 · STADE BABEMBA TRAORÉ, SIKASSO</p>
+</section>
+
+<!-- À propos -->
+<section id="apropos" aria-labelledby="t-apropos" style="background:var(--creme)">
+<div style="max-width:1200px;margin:0 auto;padding:80px 24px;display:flex;flex-wrap:wrap;gap:48px">
+<div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:16px">
+<div class="surtitre">LE FESTIVAL</div>
+<h2 id="t-apropos" class="h2">Un rendez-vous culturel majeur à Sikasso</h2>
+<p class="texte">Après sept éditions, le Festival Culturel International Nangnerki prépare sa huitième édition, avec un programme élargi dont les activités commencent un mois avant l'ouverture officielle.</p>
+<p class="texte">L'innovation majeure : la décentralisation des activités culturelles dans les 19 quartiers de Sikasso, autour d'un grand concours inter-quartiers de danse de balafon, en collaboration avec la Coordination des jeunes et chefs de quartier.</p>
+<p class="texte">Le festival est organisé par KASS FA COM SARL, en partenariat avec l'Association Culturelle Nangnerki (ACN).</p>
+</div>
+<div class="sombre" style="flex:1 1 360px;min-width:0;background:var(--brun);color:var(--creme);padding:36px;display:flex;flex-direction:column;gap:14px">
+<h3 class="surtitre" style="margin:0">NOS OBJECTIFS</h3>
+
+<div style="font-size:17px;line-height:1.6">Promouvoir le balafon et les danses traditionnelles auprès des jeunes des 19 quartiers.</div>
+
+<div style="font-size:17px;line-height:1.6">Favoriser la participation citoyenne et l'engagement de la jeunesse.</div>
+
+<div style="font-size:17px;line-height:1.6">Mobiliser les associations féminines pour l'assainissement et l'environnement.</div>
+
+<div style="font-size:17px;line-height:1.6">Valoriser les talents des DJ et les artistes, artisans et groupes traditionnels du Mali et des pays voisins.</div>
+
+<div style="font-size:17px;line-height:1.6">Former 30 journalistes à l'usage responsable de l'intelligence artificielle.</div>
+
+<div style="font-size:17px;line-height:1.6">Créer un cadre de concertation entre autorités transfrontalières.</div>
+
+<div style="font-size:17px;line-height:1.6">Dynamiser les échanges commerciaux, le tourisme et la gastronomie de la région.</div>
+
+</div>
+</div>
+</section>
+
+<!-- Activités -->
+<section id="activites" aria-labelledby="t-activites" style="background:var(--sable)">
+<div style="max-width:1200px;margin:0 auto;padding:80px 24px;display:flex;flex-direction:column;gap:32px">
+<div>
+<div class="surtitre">AU PROGRAMME</div>
+<h2 id="t-activites" class="h2" style="margin-top:8px">Six axes, dix jours de festival</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+
+<div class="carte-axe">
+<div style="font-weight:700;font-size:13px;letter-spacing:1.5px;color:var(--terre)">AXE 1</div>
+<h3 style="margin:0;font-size:22px">Concours inter-quartiers de balafon</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">Un concours de danse de balafon dans les 19 quartiers, avec grande finale sur la scène du festival.</p>
+</div>
+
+<div class="carte-axe">
+<div style="font-weight:700;font-size:13px;letter-spacing:1.5px;color:var(--terre)">AXE 1</div>
+<h3 style="margin:0;font-size:22px">Football inter-établissements</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">Un tournoi entre établissements scolaires de Sikasso : fair-play, esprit d'équipe et cohésion.</p>
+</div>
+
+<div class="carte-axe">
+<div style="font-weight:700;font-size:13px;letter-spacing:1.5px;color:var(--terre)">AXE 1</div>
+<h3 style="margin:0;font-size:22px">Assainissement avec les associations féminines</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">Des journées avant, pendant et après le festival, avec prix de participation et attestations.</p>
+</div>
+
+<div class="carte-axe">
+<div style="font-weight:700;font-size:13px;letter-spacing:1.5px;color:var(--terre)">AXE 2</div>
+<h3 style="margin:0;font-size:22px">Nuit de l'intégration</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">Cinq troupes de balafon du Mali, du Burkina Faso, de Côte d'Ivoire et de Guinée-Conakry.</p>
+</div>
+
+<div class="carte-axe">
+<div style="font-weight:700;font-size:13px;letter-spacing:1.5px;color:var(--terre)">AXE 2</div>
+<h3 style="margin:0;font-size:22px">Meilleur DJ de Sikasso</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">La Soirée blanche Nangnerki : une compétition publique en plein air, dress-code blanc.</p>
+</div>
+
+<div class="carte-axe">
+<div style="font-weight:700;font-size:13px;letter-spacing:1.5px;color:var(--terre)">AXE 2</div>
+<h3 style="margin:0;font-size:22px">Quatre jours de concerts géants</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">Du 1er au 4 avril : musique traditionnelle, urbaine, balafon et nouveaux talents.</p>
+</div>
+
+<div class="carte-axe">
+<div style="font-weight:700;font-size:13px;letter-spacing:1.5px;color:var(--terre)">AXE 3</div>
+<h3 style="margin:0;font-size:22px">Formation de 30 journalistes</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">Intelligence artificielle et journalisme : outils, vérification des faits et déontologie.</p>
+</div>
+
+<div class="carte-axe">
+<div style="font-weight:700;font-size:13px;letter-spacing:1.5px;color:var(--terre)">AXE 4</div>
+<h3 style="margin:0;font-size:22px">Rencontre des autorités transfrontalières</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">Gestion concertée des conflits liés aux ressources naturelles partagées.</p>
+</div>
+
+<div class="carte-axe">
+<div style="font-weight:700;font-size:13px;letter-spacing:1.5px;color:var(--terre)">AXE 5</div>
+<h3 style="margin:0;font-size:22px">Foire-exposition internationale</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">Artisanat, agroalimentaire, textile, cosmétiques, commerce et industries culturelles.</p>
+</div>
+
+<div class="carte-axe">
+<div style="font-weight:700;font-size:13px;letter-spacing:1.5px;color:var(--terre)">AXE 5</div>
+<h3 style="margin:0;font-size:22px">Village Nangnerki et village gastronomique</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">Une vitrine du tourisme de la région de Sikasso et de la cuisine malienne et des pays invités.</p>
+</div>
+
+<div class="carte-axe">
+<div style="font-weight:700;font-size:13px;letter-spacing:1.5px;color:var(--terre)">AXE 6</div>
+<h3 style="margin:0;font-size:22px">Village des enfants</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">Jeux éducatifs, peinture, dessin, bogolan, jeux traditionnels et structures gonflables.</p>
+</div>
+
+<div class="carte-axe">
+<div style="font-weight:700;font-size:13px;letter-spacing:1.5px;color:var(--terre)">SOIRÉE MODE</div>
+<h3 style="margin:0;font-size:22px">Nangnerki Fashion Night</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">Bogolan, tissage et création : 5 créateurs, 5 tisserands et 5 stylistes pour 20 créations.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Programme -->
+<section id="programme" aria-labelledby="t-programme" style="background:var(--creme)">
+<div style="max-width:1200px;margin:0 auto;padding:80px 24px;display:flex;flex-direction:column;gap:28px">
+<div>
+<div class="surtitre">CHRONOGRAMME 8e ÉDITION</div>
+<h2 id="t-programme" class="h2" style="margin-top:8px">Du 1er mars au 4 avril 2027</h2>
+</div>
+<div role="tablist" aria-label="Choisir une période du programme" style="display:flex;flex-wrap:wrap;gap:8px">
+
+</div>
+<div role="tabpanel" id="panneau-prog" aria-labelledby="tab-0" tabindex="0" style="display:flex;flex-direction:column;gap:0;border-top:2px solid var(--brun)">
+
+</div>
+<p style="margin:0;font-size:14px;color:var(--brun2)">Programmation artistique des concerts à annoncer. Le programme peut être ajusté par l'organisation.</p>
+</div>
+</section>
+
+<!-- Balafon -->
+<section id="balafon" aria-labelledby="t-balafon" class="sombre" style="background:var(--brun);color:var(--creme)">
+<div style="max-width:1200px;margin:0 auto;padding:80px 24px;display:flex;flex-wrap:wrap;gap:48px">
+<div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:18px">
+<div class="surtitre">CULTURE VIVANTE</div>
+<h2 id="t-balafon" class="h2">Le balafon réunit les 19 quartiers</h2>
+<p class="texte">Un concours de danse de balafon est organisé dans chacun des 19 quartiers de Sikasso. Le meilleur danseur de chaque quartier se qualifie pour la grande finale, sur la grande scène du festival.</p>
+<p class="texte">Les participants reçoivent un certificat de participation et une reconnaissance officielle du festival.</p>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px"><img class="photo" src="assets/balafon1.webp" alt="Musicien jouant du balafon sur scène lors de l'édition 7" loading="lazy" width="1080" height="720" style=""><img class="photo" src="assets/balafon2.webp" alt="Joueurs de tam-tam et de calebasses sur scène lors de l'édition 7" loading="lazy" width="1080" height="720" style=""></div>
+</div>
+<div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:16px">
+<div style="border:3px solid var(--or);padding:28px;display:flex;flex-direction:column;gap:10px">
+<h3 class="h3b" style="color:var(--or);margin:0;font-weight:400">Les récompenses</h3>
+<div style="font-size:18px;line-height:1.7">1er : une moto offerte par le sponsor officiel<br>2e : 150 000 FCFA<br>3e : 100 000 FCFA</div>
+</div>
+<div style="border:3px solid var(--or);padding:28px;display:flex;flex-direction:column;gap:10px">
+<h3 class="h3b" style="color:var(--or);margin:0;font-weight:400">Nuit de l'intégration</h3>
+<div style="font-size:16px;line-height:1.6">Cinq troupes de quatre pays : Mali (2), Burkina Faso, Côte d'Ivoire et Guinée-Conakry, le 1er avril 2027.</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Exposants -->
+<section id="exposants" aria-labelledby="t-exposants" style="background:var(--sable)">
+<div style="max-width:1200px;margin:0 auto;padding:80px 24px;display:flex;flex-wrap:wrap;gap:48px">
+<div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:16px">
+<div class="surtitre">FOIRE-EXPOSITION INTERNATIONALE</div>
+<h2 id="t-exposants" class="h2">Exposez devant 30 000 visiteurs et 500 000 personnes touchées</h2>
+<p class="texte">Une grande foire-exposition accueille pendant toute la durée du festival des exposants du Mali et des pays invités : un espace de promotion, de vente et de rencontres commerciales.</p>
+<p class="texte">Deux espaces thématiques complètent la foire : le Village Nangnerki (tourisme et patrimoine) et le village gastronomique (cuisine malienne et spécialités des pays invités).</p>
+<div style="background:var(--brun);color:var(--creme);padding:18px 22px;font-weight:700;font-size:18px;line-height:1.5">Vente des stands : du 15 novembre 2026 au 26 février 2027</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+
+<div class="carte-stand">
+<div style="font-weight:700;font-size:17px">Stand standard</div>
+<div style="font-size:14px;color:var(--brun2)">9 m²</div>
+<div style="font-family:'Bebas Neue',Impact,sans-serif;font-size:34px;line-height:1.1;color:var(--terre);letter-spacing:1px">50 000 FCFA</div>
+</div>
+
+<div class="carte-stand">
+<div style="font-weight:700;font-size:17px">Stand à l'angle</div>
+<div style="font-size:14px;color:var(--brun2)">9 m²</div>
+<div style="font-family:'Bebas Neue',Impact,sans-serif;font-size:34px;line-height:1.1;color:var(--terre);letter-spacing:1px">75 000 FCFA</div>
+</div>
+
+<div class="carte-stand">
+<div style="font-weight:700;font-size:17px">Stand restauration</div>
+<div style="font-size:14px;color:var(--brun2)">9 m²</div>
+<div style="font-family:'Bebas Neue',Impact,sans-serif;font-size:34px;line-height:1.1;color:var(--terre);letter-spacing:1px">75 000 FCFA</div>
+</div>
+
+<div class="carte-stand">
+<div style="font-weight:700;font-size:17px">Stand voix principale</div>
+<div style="font-size:14px;color:var(--brun2)">9 m²</div>
+<div style="font-family:'Bebas Neue',Impact,sans-serif;font-size:34px;line-height:1.1;color:var(--terre);letter-spacing:1px">80 000 FCFA</div>
+</div>
+
+<div class="carte-stand">
+<div style="font-weight:700;font-size:17px">Stand VIP</div>
+<div style="font-size:14px;color:var(--brun2)">18 m²</div>
+<div style="font-family:'Bebas Neue',Impact,sans-serif;font-size:34px;line-height:1.1;color:var(--terre);letter-spacing:1px">500 000 FCFA</div>
+</div>
+
+</div>
+<p style="margin:0;font-size:16px;line-height:1.6;color:var(--brun2)">L'admission est effective après réception du formulaire signé et paiement des frais de participation, selon le règlement des exposants.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<a class="btn btn-primaire" href="https://wa.me/22376409945?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20stand%20au%20Festival%20Nangnerki%20(8e%20%C3%A9dition).">Réserver mon stand sur WhatsApp</a>
+<a class="btn btn-secondaire" href="mailto:associationculturellenangnerki@gmail.com?subject=R%C3%A9servation%20d%27un%20stand%20-%20Festival%20Nangnerki%202027">Réserver par e-mail</a>
+</div>
+</div>
+<div style="flex:1 1 320px;min-width:0;background:var(--creme);padding:32px;display:flex;flex-direction:column;gap:10px">
+<h3 class="surtitre" style="margin:0">SECTEURS REPRÉSENTÉS</h3>
+
+<div style="font-size:17px;line-height:1.5;padding:6px 0;border-bottom:1px solid #E6D3A8">Artisanat</div>
+
+<div style="font-size:17px;line-height:1.5;padding:6px 0;border-bottom:1px solid #E6D3A8">Agriculture et agroalimentaire</div>
+
+<div style="font-size:17px;line-height:1.5;padding:6px 0;border-bottom:1px solid #E6D3A8">Transformation des produits locaux</div>
+
+<div style="font-size:17px;line-height:1.5;padding:6px 0;border-bottom:1px solid #E6D3A8">Textile et habillement</div>
+
+<div style="font-size:17px;line-height:1.5;padding:6px 0;border-bottom:1px solid #E6D3A8">Produits cosmétiques</div>
+
+<div style="font-size:17px;line-height:1.5;padding:6px 0;border-bottom:1px solid #E6D3A8">Équipements et innovations</div>
+
+<div style="font-size:17px;line-height:1.5;padding:6px 0;border-bottom:1px solid #E6D3A8">Industries culturelles et créatives</div>
+
+<div style="font-size:17px;line-height:1.5;padding:6px 0;border-bottom:1px solid #E6D3A8">Commerce général</div>
+
+
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px"><img class="photo" src="assets/foire1.webp" alt="Stand de mode et de couture à la foire-exposition, édition 7" loading="lazy" width="1080" height="720" style=""><img class="photo" src="assets/foire2.webp" alt="Stand de produits locaux à la foire-exposition, édition 7" loading="lazy" width="1080" height="720" style=""></div>
+</div>
+</div>
+</section>
+
+<!-- Partenaires -->
+<section id="partenaires" aria-labelledby="t-partenaires" style="background:var(--creme)">
+<div style="max-width:1200px;margin:0 auto;padding:80px 24px;display:flex;flex-direction:column;gap:28px">
+<div>
+<div class="surtitre">PARTENAIRES</div>
+<h2 id="t-partenaires" class="h2" style="margin-top:8px">Associez votre image au festival</h2>
+</div>
+<p class="texte" style="max-width:820px">Institutions publiques, collectivités, entreprises, organismes internationaux et partenaires techniques et financiers : le festival vous propose plusieurs formes d'engagement, avec des espaces de visibilité sur le site et sur les supports de communication.</p>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div class="surtitre">ILS NOUS ONT FAIT CONFIANCE</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px"><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/orange.webp" alt="Logo Orange Mali, sponsor officiel" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/unesco.webp" alt="Logo UNESCO" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/uemoa.webp" alt="Logo UEMOA et Coopération suisse" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/hcnls.webp" alt="Logo HCNLS, Secrétariat exécutif" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/cofina.webp" alt="Logo Groupe Cofina" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/ortm.webp" alt="Logo ORTM" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/kenetv.webp" alt="Logo Kene TV" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/rtb.webp" alt="Logo RTB" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/emicom.webp" alt="Logo Emicom" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/cim.webp" alt="Logo CIM Mali" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/kya.webp" alt="Logo Réseau culturel Kya" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/cicf.webp" alt="Logo CICF" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/maaya.webp" alt="Logo Fonds Maaya" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/i4a.webp" alt="Logo Instruments 4 Africa" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/konexion.webp" alt="Logo Kone'xion Culture" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/malitourisme.webp" alt="Logo Mali Tourisme" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div><div style="background:#fff;border:1px solid var(--filet);height:96px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box"><img src="assets/festival-niger.webp" alt="Logo Fondation Festival sur le Niger" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+
+<div style="background:var(--sable);padding:20px 24px;font-weight:600;font-size:17px">Financement direct</div>
+
+<div style="background:var(--sable);padding:20px 24px;font-weight:600;font-size:17px">Sponsoring officiel</div>
+
+<div style="background:var(--sable);padding:20px 24px;font-weight:600;font-size:17px">Appui logistique et matériel</div>
+
+<div style="background:var(--sable);padding:20px 24px;font-weight:600;font-size:17px">Transport et hébergement des délégations</div>
+
+<div style="background:var(--sable);padding:20px 24px;font-weight:600;font-size:17px">Dotation en équipements</div>
+
+<div style="background:var(--sable);padding:20px 24px;font-weight:600;font-size:17px">Prise en charge des prix et récompenses</div>
+
+<div style="background:var(--sable);padding:20px 24px;font-weight:600;font-size:17px">Accompagnement technique</div>
+
+<div style="background:var(--sable);padding:20px 24px;font-weight:600;font-size:17px">Couverture médiatique</div>
+
+</div>
+<div class="sombre" style="background:var(--brun);color:var(--creme);padding:36px;display:flex;flex-direction:column;gap:14px">
+<h3 class="h3b" style="color:var(--or);margin:0;font-weight:400">Quatre temps forts pour votre visibilité</h3>
+
+<div style="font-size:17px;line-height:1.6"><strong>Concours de balafon des 19 quartiers</strong> : une opération de proximité qui touche directement les populations de Sikasso, avec une moto en 1er prix.</div>
+
+<div style="font-size:17px;line-height:1.6"><strong>Soirée blanche et meilleur DJ</strong> : un concept moderne pour attirer la jeunesse, les entreprises et les partenaires commerciaux.</div>
+
+<div style="font-size:17px;line-height:1.6"><strong>Village gastronomique</strong> : une vitrine des richesses touristiques, gastronomiques, artisanales et culturelles de la région.</div>
+
+<div style="font-size:17px;line-height:1.6"><strong>Nuit des communautés invitées</strong> : une soirée de rencontre entre communautés du Mali et des pays invités.</div>
+
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<a class="btn btn-primaire" href="https://wa.me/22376409945?text=Bonjour%2C%20je%20souhaite%20recevoir%20le%20dossier%20de%20sponsoring%20du%20Festival%20Nangnerki%20(8e%20%C3%A9dition).">Demander le dossier de sponsoring</a>
+<a class="btn btn-secondaire" href="mailto:associationculturellenangnerki@gmail.com?subject=Partenariat%20-%20Festival%20Nangnerki%202027">Nous écrire par e-mail</a>
+</div>
+</div>
+</section>
+
+<!-- Édition 7 -->
+<section id="edition7" aria-labelledby="t-edition7" style="background:var(--or)">
+<div style="max-width:1200px;margin:0 auto;padding:80px 24px;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+<div style="flex:1 1 320px;min-width:0;display:flex;justify-content:center">
+<img src="assets/affiche7.webp" alt="Affiche de la 7e édition du Festival Nangnerki" style="width:100%;max-width:340px;height:auto;display:block;box-shadow:0 16px 40px rgba(43,20,8,0.3)">
+</div>
+<div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:16px">
+<div style="font-weight:700;letter-spacing:2px;font-size:13px">RETOUR SUR L'ÉDITION 7</div>
+<h2 id="t-edition7" class="h2">10 au 17 février 2026</h2>
+<p class="texte">La 7e édition s'est tenue au Stade Babemba Traoré avec une foire-exposition, une Coupe Nangnerki de football, de la lutte traditionnelle, un atelier de formation pour journalistes, des panels et quatre concerts géants.</p>
+<p class="texte">« Ensemble magnifions notre culture. »</p>
+</div>
+</div>
+<div style="max-width:1200px;margin:0 auto;padding:0 24px 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px"><img class="photo" src="assets/ceremonie.webp" alt="Cérémonie d'ouverture avec les autorités, édition 7" loading="lazy" width="1080" height="720" style=""><img class="photo" src="assets/culinaire.webp" alt="Jury du concours culinaire, édition 7" loading="lazy" width="1080" height="720" style=""><img class="photo" src="assets/tata.webp" alt="Visite touristique du Mur du Tata, Sikasso" loading="lazy" width="1080" height="720" style=""><img class="photo" src="assets/village.webp" alt="Entrée du Village Nangnerki, édition 7" loading="lazy" width="1080" height="720" style=""><img class="photo" src="assets/caravane.webp" alt="Caravane du festival dans les rues de Sikasso" loading="lazy" width="1080" height="720" style=""><img class="photo" src="assets/foot.webp" alt="Trophées de la Coupe Nangnerki de football" loading="lazy" width="1080" height="720" style=""><img class="photo" src="assets/scene.webp" alt="Grande scène et public lors d'un concert, édition 7" loading="lazy" width="1080" height="720" style=""><img class="photo" src="assets/concert2.webp" alt="Artiste sur scène devant l'écran géant, édition 7" loading="lazy" width="1080" height="720" style=""></div>
+</section>
+
+<!-- Contact -->
+<section id="contact" aria-labelledby="t-contact" style="background:var(--creme)">
+<div style="max-width:1200px;margin:0 auto;padding:80px 24px;display:flex;flex-wrap:wrap;gap:48px">
+<div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:14px">
+<h2 id="t-contact" class="h2">Nous contacter</h2>
+<p class="texte">Infoline du festival :</p>
+<p style="margin:0;font-size:22px;font-weight:700;line-height:1.6"><a href="tel:+22366664547" style="color:var(--brun);text-decoration:underline;text-underline-offset:4px">+223 66 66 45 47</a><br><a href="tel:+22376409945" style="color:var(--brun);text-decoration:underline;text-underline-offset:4px">+223 76 40 99 45</a></p>
+<p class="texte">Esplanade du Stade Babemba Traoré, Sikasso, Mali</p>
+<p class="texte">E-mail : <a class="tlink" href="mailto:associationculturellenangnerki@gmail.com">associationculturellenangnerki@gmail.com</a></p>
+</div>
+<div style="flex:1 1 360px;min-width:0;background:var(--or);padding:32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-weight:700;font-size:20px;margin:0">Être recontacté</h3>
+<p style="margin:0;font-size:16px;line-height:1.5">Laissez votre nom et votre numéro : l'équipe vous répond sur WhatsApp.</p>
+<label for="f-nom" style="font-weight:600;font-size:15px">Votre nom</label>
+<input id="f-nom" class="champ" type="text" autocomplete="name" placeholder="Nom et prénom" required aria-required="true" aria-invalid="false" aria-describedby="f-err" value="">
+<label for="f-tel" style="font-weight:600;font-size:15px">Votre numéro (WhatsApp de préférence)</label>
+<input id="f-tel" class="champ" type="tel" autocomplete="tel" placeholder="+223 …" required aria-required="true" aria-invalid="false" aria-describedby="f-err" value="">
+<div style="font-weight:600;font-size:15px">Vous êtes</div>
+<div role="radiogroup" aria-label="Votre profil" style="display:flex;flex-wrap:wrap;gap:8px">
+
+</div>
+<div id="f-err" role="alert" style="font-weight:700;font-size:15px;color:#7A1A00;min-height:0"></div>
+<a id="f-wa" class="btn btn-primaire" href="#" hidden style="margin-top:6px">Envoyer sur WhatsApp (ouvre WhatsApp)</a>
+<button id="f-btn" type="button" class="btn btn-primaire" style="margin-top:6px">Envoyer sur WhatsApp</button>
+</div>
+<div style="flex:1 1 360px;min-width:0;background:var(--sable);padding:32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-weight:700;font-size:20px;margin:0">Organisation</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">KASS FA COM SARL, en partenariat avec l'Association Culturelle Nangnerki (ACN). Directeur du festival : Kassim Bengaly.</p>
+<h3 style="font-weight:700;font-size:20px;margin:8px 0 0">Suivez le festival</h3>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<a class="btn btn-primaire" href="https://web.facebook.com/nangnerki">Facebook</a>
+<a class="btn btn-primaire" href="https://www.tiktok.com/@festivalnangnerki">TikTok</a>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer class="sombre" style="background:var(--brun);color:var(--creme)">
+<div style="max-width:1200px;margin:0 auto;padding:28px 24px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:14px">
+<div>© KASS FA COM SARL · Association Culturelle Nangnerki · Sikasso, Mali</div>
+<div>Festival Culturel International Nangnerki · 8e édition</div>
+</div>
+</footer>
+
+</div>
+
+<script>(function(){
+var PROG=[{"label":"1–25 mars","ev":[{"periode":"1er – 25 mars","titre":"Concours de danse de balafon dans les 19 quartiers","detail":"Sélection du meilleur danseur de chaque quartier, en collaboration avec la Coordination des jeunes."},{"periode":"1er – 25 mars","titre":"Phase éliminatoire du tournoi de football inter-établissements","detail":"Inscriptions, tirage au sort et matchs éliminatoires."},{"periode":"1er – 25 mars","titre":"Journées préparatoires d'assainissement","detail":"Mobilisation des associations féminines pour l'assainissement des espaces publics."},{"periode":"20 – 25 mars","titre":"Finalisation des préparatifs et installation","detail":"Mise en place du site et des stands."}]},{"label":"26 mars","ev":[{"periode":"26 mars","titre":"Ouverture officielle du festival","detail":"Cérémonie d'ouverture sur l'esplanade du Stade Babemba Traoré."},{"periode":"26 mars – 4 avril","titre":"Foire-exposition, Village Nangnerki, gastronomie et espace enfants","detail":"Ouverts pendant toute la durée du festival."},{"periode":"26 – 28 mars","titre":"Finales et activités culturelles inter-quartiers","detail":"Les quartiers se retrouvent autour du balafon et de la danse."}]},{"label":"27 mars","ev":[{"periode":"27 mars","titre":"Soirée blanche et concours du meilleur DJ","detail":"Les DJ des principales boîtes de nuit partenaires s'affrontent en plein air. Dress-code : blanc."}]},{"label":"28 mars","ev":[{"periode":"28 mars","titre":"Nuit des communautés invitées à Sikasso","detail":"Une soirée consacrée aux communautés invitées."},{"periode":"28 – 30 mars","titre":"Formation de 30 journalistes à l'intelligence artificielle","detail":"Fondamentaux de l'IA, outils pour les médias, vérification des informations et éthique."}]},{"label":"30 mars","ev":[{"periode":"30 mars","titre":"Rencontre des autorités transfrontalières","detail":"Gestion concertée des conflits liés aux ressources naturelles partagées : agriculteurs et éleveurs, forêts, mécanismes traditionnels, rôle des femmes et des jeunes."}]},{"label":"31 mars","ev":[{"periode":"31 mars","titre":"Découverte des talents locaux et défilé de mode","detail":"Nangnerki Fashion Night : bogolan, tissage et création."}]},{"label":"1er avril","ev":[{"periode":"1er avril","titre":"Nuit de l'intégration","detail":"Cinq troupes de balafon de quatre pays."},{"periode":"1er avril","titre":"Concert géant · soirée 1 sur 4","detail":"Début des quatre soirées de concerts, avec des artistes nationaux et internationaux sur la grande scène."}]},{"label":"2–3 avril","ev":[{"periode":"2 – 3 avril","titre":"Concerts géants · soirées 2 et 3 sur 4","detail":"Soirées de musique traditionnelle, moderne et urbaine."},{"periode":"3 avril","titre":"Finale du tournoi de football inter-établissements","detail":"Remise des trophées et récompenses."}]},{"label":"4 avril","ev":[{"periode":"4 avril","titre":"Concert géant · soirée 4 sur 4","detail":"Dernière soirée de concerts sur la grande scène."},{"periode":"4 avril","titre":"Cérémonie de clôture officielle","detail":"Remise des prix et attestations, assainissement final du site."}]}];
+var $=function(i){return document.getElementById(i)};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Compte à rebours */
+function cd(){
+  var diff=Date.UTC(2027,2,26,0,0,0)-Date.now(), ok=diff>0;
+  $('cd-j').textContent=ok?Math.floor(diff/86400000):0;
+  $('cd-h').textContent=ok?Math.floor(diff%86400000/3600000):0;
+  $('cd-m').textContent=ok?Math.floor(diff%3600000/60000):0;
+  $('cd-t').textContent=ok?"avant l'ouverture officielle, le 26 mars 2027":"Le festival est ouvert : rendez-vous sur l'esplanade du Stade Babemba Traoré";
+}
+cd(); setInterval(cd,30000);
+
+/* Programme (onglets) */
+var cur=0, tl=document.querySelector('[role="tablist"]'), panel=$('panneau-prog');
+function nav(i,n,k){ if(k==='ArrowRight'||k==='ArrowDown')return (i+1)%n; if(k==='ArrowLeft'||k==='ArrowUp')return (i-1+n)%n; if(k==='Home')return 0; if(k==='End')return n-1; return null; }
+function drawTabs(){
+  tl.innerHTML=''; PROG.forEach(function(p,i){
+    var b=document.createElement('button'); b.type='button'; b.setAttribute('role','tab'); b.id='tab-'+i; b.className='onglet';
+    b.setAttribute('aria-selected',i===cur?'true':'false'); b.setAttribute('aria-controls','panneau-prog'); b.tabIndex=i===cur?0:-1; b.textContent=p.label;
+    b.onclick=function(){cur=i;draw();};
+    b.onkeydown=function(e){var t=nav(i,PROG.length,e.key); if(t!==null){e.preventDefault();cur=t;draw();$('tab-'+t).focus();}};
+    tl.appendChild(b);
+  });
+}
+function drawEvents(){
+  panel.setAttribute('aria-labelledby','tab-'+cur);
+  panel.innerHTML=PROG[cur].ev.map(function(e){return '<div style="display:flex;flex-wrap:wrap;gap:12px 32px;padding:22px 0;border-bottom:1px solid var(--filet)"><div style="flex:0 0 170px;font-weight:700;font-size:17px;color:var(--terre)">'+esc(e.periode)+'</div><div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:4px"><div style="font-size:20px;font-weight:700">'+esc(e.titre)+'</div><div style="font-size:16px;line-height:1.6">'+esc(e.detail)+'</div></div></div>';}).join('');
+}
+function draw(){drawTabs();drawEvents();}
+draw();
+
+/* Formulaire de contact */
+var PROFILS=['Exposant','Sponsor ou partenaire','Visiteur','Autre'], pr=0, essai=false;
+var rg=document.querySelector('[role="radiogroup"]'), nom=$('f-nom'), tel=$('f-tel'), err=$('f-err'), wa=$('f-wa'), fb=$('f-btn');
+function drawProfils(){
+  rg.innerHTML=''; PROFILS.forEach(function(l,i){
+    var b=document.createElement('button'); b.type='button'; b.setAttribute('role','radio'); b.className='onglet';
+    b.setAttribute('aria-checked',i===pr?'true':'false'); b.tabIndex=i===pr?0:-1; b.textContent=l;
+    b.onclick=function(){pr=i;drawProfils();upd();};
+    b.onkeydown=function(e){var t=nav(i,PROFILS.length,e.key); if(t!==null){e.preventDefault();pr=t;drawProfils();upd();rg.children[t].focus();}};
+    rg.appendChild(b);
+  });
+}
+function upd(){
+  var nomOk=nom.value.trim().length>1, telOk=tel.value.replace(/\D/g,'').length>=8, valide=nomOk&&telOk;
+  var msg='Bonjour, je suis '+(nom.value.trim()||'(nom)')+', '+PROFILS[pr].toLowerCase()+". Je souhaite être recontacté au sujet du Festival Nangnerki (8e édition). Mon numéro : "+(tel.value.trim()||'(numéro)')+'.';
+  wa.href='https://wa.me/22376409945?text='+encodeURIComponent(msg);
+  wa.hidden=!valide; fb.hidden=valide;
+  err.textContent=(!essai||valide)?'':(!nomOk&&!telOk?'Veuillez saisir votre nom et un numéro de téléphone valide (8 chiffres au minimum).':(!nomOk?'Veuillez saisir votre nom.':'Veuillez saisir un numéro de téléphone valide (8 chiffres au minimum).'));
+  nom.setAttribute('aria-invalid',essai&&!nomOk?'true':'false'); tel.setAttribute('aria-invalid',essai&&!telOk?'true':'false');
+}
+nom.addEventListener('input',upd); tel.addEventListener('input',upd); fb.addEventListener('click',function(){essai=true;upd();});
+drawProfils(); upd();
+
+/* Apparition au défilement */
+try{
+  if(!rm&&'IntersectionObserver' in window){
+    var els=Array.prototype.slice.call(document.querySelectorAll('main > section:not(:first-child) > div, main .photo, main .carte-axe, main .carte-stand'));
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target);}});},{threshold:0.08});
+    els.forEach(function(el){el.classList.add('rev');io.observe(el);});
+    document.documentElement.classList.add('anim');
+  }
+}catch(e){}
+
+/* Écran d'ouverture */
+try{
+  var vu=false; try{vu=sessionStorage.getItem('nangnerki-splash')==='1';}catch(e){}
+  var sp=$('splash');
+  if(sp&&!rm&&!vu){
+    var zones=Array.prototype.slice.call(document.querySelectorAll('header.entete, main, footer')), root=document.documentElement, btn=$('splash-entrer'), fini=false, timer;
+    root.classList.add('splash-on'); zones.forEach(function(z){z.setAttribute('inert','');}); if(btn)btn.focus();
+    var touche=function(e){if(e.key==='Escape'||(e.key==='Enter'&&e.target===btn))fermer();};
+    var fermer=function(){
+      if(fini)return; fini=true; clearTimeout(timer);
+      try{sessionStorage.setItem('nangnerki-splash','1');}catch(e){}
+      sp.classList.add('sortie'); document.removeEventListener('keydown',touche);
+      setTimeout(function(){root.classList.remove('splash-on');sp.classList.remove('sortie');zones.forEach(function(z){z.removeAttribute('inert');});window.scrollTo(0,0);},900);
+    };
+    document.addEventListener('keydown',touche); if(btn)btn.addEventListener('click',fermer); sp.addEventListener('click',fermer);
+    timer=setTimeout(fermer,4200);
+  }
+}catch(e){}
+})();
+</script>
+</body>
+</html>
